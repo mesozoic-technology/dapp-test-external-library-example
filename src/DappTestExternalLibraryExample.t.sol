@@ -11,11 +11,12 @@ contract DappTestExternalLibraryExampleTest is DSTest {
         example = new DappTestExternalLibraryExample();
     }
 
-    function testFail_basic_sanity() public {
-        assertTrue(false);
+    function testExternalLibrary () public {
+
+        bool success = example.useExternalLib();
+
+	assertTrue(success);
+
     }
 
-    function test_basic_sanity() public {
-        assertTrue(true);
-    }
 }
